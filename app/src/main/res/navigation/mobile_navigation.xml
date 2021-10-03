@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.a45_ussd.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.a45_ussd.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.a45_ussd.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/bannerFragment"
+        android:name="com.example.a45_ussd.ui.banner.BannerFragment"
+        android:label="fragment_banner"
+        tools:layout="@layout/fragment_banner" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.a45_ussd.ui.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/internetFragment"
+        android:name="com.example.a45_ussd.ui.components.InternetFragment"
+        android:label="fragment_internet"
+        tools:layout="@layout/fragment_internet" />
+    <fragment
+        android:id="@+id/smsFragment"
+        android:name="com.example.a45_ussd.ui.components.SmsFragment"
+        android:label="fragment_sms"
+        tools:layout="@layout/fragment_sms" />
+    <fragment
+        android:id="@+id/USSDFragment"
+        android:name="com.example.a45_ussd.ui.components.USSDFragment"
+        android:label="fragment_u_s_s_d"
+        tools:layout="@layout/fragment_u_s_s_d" />
+    <fragment
+        android:id="@+id/xizmatlarFragment"
+        android:name="com.example.a45_ussd.ui.components.XizmatlarFragment"
+        android:label="fragment_xizmatlar"
+        tools:layout="@layout/fragment_xizmatlar" />
+    <fragment
+        android:id="@+id/tarifFragment"
+        android:name="com.example.a45_ussd.ui.components.TarifFragment"
+        android:label="fragment_tarif"
+        tools:layout="@layout/fragment_tarif" />
+    <fragment
+        android:id="@+id/internet_ViewPagerFragment"
+        android:name="com.example.a45_ussd.ui.components.Internet_ViewPagerFragment"
+        android:label="fragment_internet__view_pager"
+        tools:layout="@layout/fragment_internet__view_pager" />
+    <fragment
+        android:id="@+id/tarif_ViewPagerFragment"
+        android:name="com.example.a45_ussd.ui.components.Tarif_ViewPagerFragment"
+        android:label="Tarif_ViewPagerFragment" />
+</navigation>
