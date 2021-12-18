@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_banner" />
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.a45_ussd.ui.about.AboutFragment"
+        android:name="com.example.a45_ussd.ui.bottom_bar.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
@@ -66,4 +66,5 @@
         android:id="@+id/tarif_ViewPagerFragment"
         android:name="com.example.a45_ussd.ui.components.Tarif_ViewPagerFragment"
         android:label="Tarif_ViewPagerFragment" />
+
 </navigation>

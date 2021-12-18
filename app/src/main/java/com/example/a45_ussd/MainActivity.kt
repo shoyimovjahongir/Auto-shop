@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.a45_ussd.databinding.ActivityMainBinding
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.example.a45_ussd.databinding.FragmentHomeBinding
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 
@@ -44,11 +45,62 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
+                R.id.nav_share, R.id.nav_mark, R.id.nav_about
+
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+        binding.appBarMain.home.setOnClickListener {
+            while (navController.currentDestination!!.id != R.id.nav_home) {
+                navController.popBackStack()
+            }
+            if (navController.currentDestination!!.id != R.id.nav_home) {
+                navController.navigate(R.id.nav_home)
+            }
+        }
+        binding.appBarMain.balans.setOnClickListener {
+            while (navController.currentDestination!!.id != R.id.nav_slideshow &&
+                navController.currentDestination!!.id != R.id.nav_home) {
+                navController.popBackStack()
+            }
+            if (navController.currentDestination!!.id != R.id.nav_slideshow) {
+                navController.navigate(R.id.nav_slideshow)
+            }
+        }
+        binding.appBarMain.person.setOnClickListener {
+            while (navController.currentDestination!!.id != R.id.nav_gallery &&
+                navController.currentDestination!!.id != R.id.nav_home) {
+                navController.popBackStack()
+            }
+            if (navController.currentDestination!!.id != R.id.nav_gallery) {
+                navController.navigate(R.id.nav_gallery)
+            }
+        }
+        binding.appBarMain.news.setOnClickListener {
+            while (navController.currentDestination!!.id != R.id.aboutFragment &&
+                navController.currentDestination!!.id != R.id.nav_home) {
+                navController.popBackStack()
+            }
+            if (navController.currentDestination!!.id != R.id.aboutFragment) {
+                navController.navigate(R.id.aboutFragment)
+            }
+        }
+        binding.appBarMain.setting.setOnClickListener {
+            while (navController.currentDestination!!.id != R.id.bannerFragment &&
+                navController.currentDestination!!.id != R.id.nav_home
+            ) {
+                navController.popBackStack()
+            }
+            if (navController.currentDestination!!.id != R.id.bannerFragment) {
+                navController.navigate(R.id.bannerFragment)
+            }
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,34 +109,12 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return super.onOptionsItemSelected(item)
-//        when (item.itemId) {
-//
-//            R.id.action_settings -> {
-//                val menuShare = Intent(Intent.ACTION_SEND)
-//                menuShare.type = "text/plain"
-//                menuShare.putExtra(Intent.EXTRA_SUBJECT, "This is the subject")
-//                menuShare.putExtra(Intent.EXTRA_TEXT, "This is body text")
-//                startActivity(Intent.createChooser(menuShare, "Share this text"))
-//            }
-//            R.id.telegram -> {
-//                val waIntent = Intent(Intent.ACTION_SEND)
-//                waIntent!!.setPackage("com.telegram")
-//                    startActivity(Intent.createChooser(waIntent, "Share with"))
-//            }
-//
-//        }
-
-
-//    }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.telegram -> {
                 val uri =
-                    Uri.parse("https://t.me/ussduz")
+                    Uri.parse("https://t.me/uz_avto_kredit_uz")
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 try {
                     startActivity(intent)
@@ -96,7 +126,7 @@ class MainActivity : AppCompatActivity() {
                 sendIntent.action = Intent.ACTION_SEND
                 sendIntent.putExtra(
                     Intent.EXTRA_TEXT,
-                    "http://play.google.com/store/apps/details?id=uz.pdp.uzmobile"
+                    "https://play.google.com/store/apps/details?id=uzavtosanoat.uz"
                 )
                 sendIntent.type = "text/plain"
                 startActivity(sendIntent)

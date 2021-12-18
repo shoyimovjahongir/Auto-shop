@@ -10,6 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/my_color"
@@ -35,7 +36,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/rubik"
             android:gravity="center"
-            android:text="Trafikni tekshirish"
+            android:text="Nomerni  tekshirish"
             android:textColor="#B08E15"
             android:textSize="@dimen/_14sdp" />
     </androidx.cardview.widget.CardView>

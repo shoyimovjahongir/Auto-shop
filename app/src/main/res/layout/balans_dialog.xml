@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textSlideshow"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -17,12 +17,12 @@
 
     <com.example.creditcardlibrary.view.CustomCreditCard
         android:id="@+id/credit_card"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
         app:cardType="VISA"
         app:month="JUNE"
         app:year="2021"
-        android:layout_below="@id/textSlideshow"
+        android:layout_below="@id/textView"
         app:scrBackground="@drawable/cbimage"
         />
 </RelativeLayout>

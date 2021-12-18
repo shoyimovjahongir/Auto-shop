@@ -60,4 +60,11 @@ dependencies {
     //auto text size
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
+    //Picasso:
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //custom Card
+    implementation 'com.example.creditcardlibrary:cardview:0.0.15'
+
 }

@@ -24,14 +24,6 @@
 
     <include layout="@layout/content_main" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_marginEnd="@dimen/fab_margin"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -43,10 +35,13 @@
 
 
         <androidx.cardview.widget.CardView
+            android:foreground="?selectableItemBackground"
+            android:clickable="true"
+            app:cardElevation="@dimen/_10sdp"
             android:id="@+id/home"
             android:layout_width="@dimen/_56sdp"
             android:layout_height="@dimen/_56sdp"
-            android:backgroundTint="#FFD12D"
+            app:cardBackgroundColor="#FFD12D"
             app:cardCornerRadius="@dimen/_28sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -75,6 +70,7 @@
             app:layout_constraintRight_toRightOf="parent">
 
             <LinearLayout
+                android:background="?selectableItemBackground"
                 android:id="@+id/balans"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -100,6 +96,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="?selectableItemBackgroundBorderless"
                 android:id="@+id/person"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -130,6 +127,7 @@
                 android:layout_weight="1" />
 
             <LinearLayout
+                android:background="?selectableItemBackgroundBorderless"
                 android:id="@+id/news"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -148,13 +146,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:gravity="center"
-                    android:text="Yangiliklar"
+                    android:text="News"
                     android:textColor="#68D2FF"
                     android:textSize="@dimen/_8sdp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:background="?selectableItemBackgroundBorderless"
                 android:id="@+id/setting"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -173,7 +172,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:gravity="center"
-                    android:text="Sozlamalar"
+                    android:text="Setting"
                     android:textColor="#68D2FF"
                     android:textSize="@dimen/_8sdp" />
 
@@ -183,4 +182,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

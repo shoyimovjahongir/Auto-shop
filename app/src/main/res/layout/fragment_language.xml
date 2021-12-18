@@ -9,10 +9,11 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/img1"
-        android:layout_width="@dimen/_132sdp"
-        android:layout_height="@dimen/_132sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
         android:layout_marginTop="@dimen/_9sdp"
-        android:src="@drawable/img1_uzmobile"
+        android:src="@drawable/img5"
         android:text="@string/hello_blank_fragment"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -66,7 +67,7 @@
         android:id="@+id/tv"
         android:layout_width="@dimen/_109sdp"
         android:layout_height="@dimen/_17sdp"
-        android:text="DM Mobile Group "
+        android:text="Uz Auto Motors "
         android:textColor="#3A3A3A"
         android:textSize="@dimen/_14sdp"
         app:layout_constraintBottom_toBottomOf="parent"

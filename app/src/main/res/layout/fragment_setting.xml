@@ -3,15 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bottom_bar.AboutFragment">
+    tools:context=".ui.bottom_bar.SettingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/_30sdp"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="About" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

@@ -7,5 +7,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io'}
     }
 }
-rootProject.name = "45_USSD"
+rootProject.name = "Auto Credit"
 include ':app'
